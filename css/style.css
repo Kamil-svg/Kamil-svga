@@ -1,0 +1,357 @@
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 20px 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #777;
+    transition: all 0.2s ease;
+  
+    /* tworzenie animacji transition: (lub transition-property) właściwość czas np. 0.1s,  ease, linear- typ animacji, następnie opóźnienie np po 1 s.*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*container*/
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+/*header*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+
+/* Menu */
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav a{
+    color: #000;
+    padding: 10px 15px;
+    font-size: 18px;
+    display: block;
+}
+
+nav a:hover {
+    background: #adad85;
+    color: #fff;
+}
+
+
+/*Main*/
+
+main {
+    display: flex;
+    justify-content: space-between; /*tworzenie 2 kolumn sidebara*/
+    background-image: linear-gradient(#f5f5f0, #8a8a5c);
+    
+}
+
+/* Article */
+article  {
+    width: 60%;
+    padding: 30px; /*margines wewnętrzny*/
+    position: relative;
+    top: 12%;
+}
+
+
+
+article p
+{
+    text-align: justify;
+}
+
+/*Aside */
+aside {
+    width: 40%;
+    height: 1100px;
+    padding: 20px;
+ /*obramowanie stałe kolor*/
+    transition-property: width;
+    transition-duration: 2s;
+    /*przejścia*/
+}
+
+aside:hover {
+    width: 90%;
+}
+
+.widget {
+    margin-bottom: 35px; /*oddzielenie widget zdjęcia z artykułem od listy */
+     position: relative;
+    top: 60%;
+    left: 15%;
+}
+
+.widget h2 {
+    color: #FFF;
+    font-weight: 800;
+}
+
+ .widget:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+
+
+.widget ul {
+    list-style: none; 
+    padding: 0 0 0 14px;
+   
+
+}
+
+.widget li {
+     margin-bottom: 14px; /*margines pomiędzy podpunktami*/
+}
+
+.widget li a{
+    color: #fff;
+    font-weight: 800;
+}
+
+.widget li a:hover {
+     color: #000;
+}
+
+
+
+/*footer*/
+footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer p {
+    margin: 0; /*po to aby wyświetlać marginesy wewnętrzne padding w stopce*/
+}
+
+
+
+
+
+/*Form*/
+
+.form
+{
+	border: 0.5px solid #000;
+	width: 450px;
+	height: 600px;
+	margin: auto;
+	position: relative;
+	top: 40px;
+    background-color: #FFF;
+}
+
+
+
+.podziekowanie
+{
+	border: 0.5px solid #000;
+	width: 250px;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	top: 450px;
+}
+
+.form h3 {
+	text-align: center;
+	padding-top: 20px 
+	font-size: 20px;
+	line-height: 60%;
+	font-weight: 550;
+}
+
+.form form label
+{
+	text-align: center;
+	font-weight: 550;
+	padding-left: 50px; 
+}
+
+.form form input[type="text"]
+{
+	height: 30px;
+	width: 350px;
+	border-radius: 10px;
+}
+
+.form form input[type="email"]
+{
+	height: 30px;
+	width: 350px;
+	border-radius: 10px;
+}
+
+.form form textarea
+{
+    width: 350px;
+	border-radius: 10px;
+	resize: none;
+}
+
+.form form table
+{
+    position: relative;
+    left: 5%;
+	margin-top: -30px;
+	padding-right: 20px;
+}
+
+
+.form form h5
+{
+	margin-top: -3px; 
+	padding-left: 45px;
+    
+}
+
+
+.form form input[type="submit"]
+{
+	color: #FFF;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #0000ff;
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+	margin-top: -10px; 
+	margin-bottom: 25px;
+}
+
+/*projekty*/
+.projects {
+    background-color: #fff;
+
+}
+
+
+.projekty {
+    position: relative;
+    left: 12%;
+}
+
+.projekty td {
+    padding: 30px 40px;
+
+}
+
+.technologies td, .technologies-en td {
+    padding: 20px 30px;
+}
+
+
+#wiecej, #more {
+    cursor: pointer;
+    float: right;
+    color: #0066ff;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+/*dla szerokości równej bądź mniejszej niż 800px*/
+@media (max-width: 800px) {
+    /*header*/
+    header {
+        flex-direction: column; /*wyświetlanie nagłówka w kolumnie poniżej 800 px, logo też*/
+    }
+    
+    
+    nav ul{
+        text-align: center;
+    }
+    
+    /*mobilne menu*/
+    nav ul li {
+        width: 100%;
+    }
+    
+    
+    
+    /*Main*/
+    main {
+        flex-direction: column;
+    }
+    
+    article, aside {
+        width: 100%;
+        padding: 25px;
+    }
+    
+    /*Article*/
+    article h1, article h2 {
+        text-align: center;
+    }
+    
+    
+    /*Aside*/
+    aside {
+        border: 0;
+        transition-property: none;
+        transition-duration: 0s;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    nav li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    
+    aside {
+        border: 0;
+    }
+    
+    
+    /*Article*/
+     article h1 {
+         margin-top: 0;
+    }
+}

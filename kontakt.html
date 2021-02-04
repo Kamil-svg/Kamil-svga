@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <!--styles-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--fonts-->
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+    <header>
+        <span></span>
+           <nav>
+        <ul>
+            <li><a href="index.html">O mnie</a></li> 
+            <li><a href="projekty.html">Moje projekty</a></li> 
+            <li><a href="kontakt.html">Kontakt</a></li> 
+            <li><a href="index-en.html"><img src="img/united-kingdom.png">English</a></li>
+        
+        </ul>
+    </nav>
+    </header>
+    
+   
+ 
+    <main>
+    
+        <article>
+            		<div class="form">
+		<br />
+			<h3>Jesteś zainteresowany usługami?</h3>
+		    <h3>Skontaktuj się ze mną</h3>
+			<form action="mail.php" method="post" >
+			
+			<label for="">Imię i nazwisko*</label>
+			<br/>
+			<center>
+			<input type="text"  name="name" required />
+			</center>
+			<br/>
+			
+			<label for="">Adres email*</label>
+			<br/>
+			<center>
+			<input type="email"  name="mail" required />
+			</center>
+			<br/>
+			
+			<label for="">Temat</label>
+			<br/>
+			<center>
+			<input type="text" name="temat" />
+			</center>
+			<br/>
+			
+			<label for="">Treść wiadomości</label>
+			<center>
+			<textarea name="tresc" rows="6" cols="48">
+			</textarea>
+			</center>
+			<h5>*wymagane</h5>
+		
+			<center>
+			<table>
+			<tr>
+			<td>
+			<input type="checkbox" name="checkbox" required>
+				</td>
+				<td>
+			<h6>Wypełnienie formularza oznacza wyrażenie zgody na przetwarzanie danych osobowych 
+				</td>
+				</tr>
+			</table>
+			</center>
+			
+			<center>
+			<input type="submit" name="wyslij" value="Wyślij" />
+			</center>
+			</form>
+			
+			</div>
+            
+        </article>
+        <aside style="background-image: url('img/zdjecie_glowne.png');">
+            <section class="widget" >
+                <br>
+                <h2>Więcej o mnie:</h2>
+                <br>
+                <ul>
+                    <li>
+                    <a href="https://www.facebook.com/kamil.franek.986/"><img src="img/facebook-app-logo.png"> Facebook</a>
+                    </li>
+                    <br>
+                    <li>
+                    <a href="https://www.linkedin.com/in/kamil-franek-793225199/"><img src="img/linkedin.png"> LinkedIn</a>
+                    </li>
+                    <br>
+                    <li>
+                    <a href="https://www.goldenline.pl/kamil-franek4/"><img src="img/iconfinder_goldenline_34400.png"> GoldenLine</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2021</p>
+    </footer>
+   </div>
+</body>
+</html>
